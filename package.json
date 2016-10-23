@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-bootstrap3-grid",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "This addon gives you access to several helpful components and mixins that can be used to compliment the Bootstrap3 Grid System.",
   "directories": {
     "doc": "doc",
     "test": "tests"

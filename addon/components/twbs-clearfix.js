@@ -80,5 +80,5 @@ export default Ember.Component.extend({
   _indexGreaterThanOrEqualToZero: Ember.computed.gte('index', 0),
   '_render?': Ember.computed('columnCount', 'index', function () {
     return this.get('index') > 0 && ((this.get('index') + 1) % this.get('columnCount')) === 0;
-  }),
+  })
 });

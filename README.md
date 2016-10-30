@@ -1,14 +1,15 @@
 # ember-cli-bootstrap3-grid [![GitHub version](https://badge.fury.io/gh/cybertoothca%2Fember-cli-bootstrap3-grid.svg)](https://badge.fury.io/gh/cybertoothca%2Fember-cli-bootstrap3-grid)
 
-[![CircleCI](https://circleci.com/gh/cybertoothca/ember-cli-bootstrap3-grid.svg?style=svg)](https://circleci.com/gh/cybertoothca/ember-cli-bootstrap3-grid) [![npm version](https://badge.fury.io/js/ember-cli-bootstrap3-grid.svg)](https://badge.fury.io/js/ember-cli-bootstrap3-grid) [![Code Climate](https://codeclimate.com/github/cybertoothca/ember-cli-bootstrap3-grid/badges/gpa.svg)](https://codeclimate.com/github/cybertoothca/ember-cli-bootstrap3-grid) ![Dependencies](https://david-dm.org/cybertoothca/ember-cli-bootstrap3-grid.svg) [![ember-observer-badge](http://emberobserver.com/badges/ember-cli-bootstrap3-grid.svg)](http://emberobserver.com/addons/ember-cli-bootstrap3-grid) [![License](https://img.shields.io/npm/l/ember-cli-bootstrap3-grid.svg)](LICENSE.md)
+[![npm version](https://badge.fury.io/js/ember-cli-bootstrap3-grid.svg)](https://badge.fury.io/js/ember-cli-bootstrap3-grid) [![CircleCI](https://circleci.com/gh/cybertoothca/ember-cli-bootstrap3-grid.svg?style=shield)](https://circleci.com/gh/cybertoothca/ember-cli-bootstrap3-grid) [![Code Climate](https://codeclimate.com/github/cybertoothca/ember-cli-bootstrap3-grid/badges/gpa.svg)](https://codeclimate.com/github/cybertoothca/ember-cli-bootstrap3-grid) ![Dependencies](https://david-dm.org/cybertoothca/ember-cli-bootstrap3-grid.svg) [![ember-observer-badge](http://emberobserver.com/badges/ember-cli-bootstrap3-grid.svg)](http://emberobserver.com/addons/ember-cli-bootstrap3-grid) [![License](https://img.shields.io/npm/l/ember-cli-bootstrap3-grid.svg)](LICENSE.md)
 
 This addon gives you access to several helpful components and mixins
 that can be used to compliment the 
-[Bootstrap3 Grid System](http://getbootstrap.com/css/#grid).  __You must
-have Bootstrap 3.x installed in your Ember application.__  Feel 
-free to use the 
+[Bootstrap3 Grid System](http://getbootstrap.com/css/#grid).
+
+__You must have Bootstrap 3.x installed in your Ember application.__  
+Feel free to use the 
 [ember-cli-bootstrap3-sass](https://emberobserver.com/addons/ember-cli-bootstrap3-sass) 
-addon to setup Bootstrap.
+addon to setup Bootstrap if you haven't already done so.
 
 ## What Does This Addon Do?
 
@@ -25,6 +26,11 @@ each loop
 _Further information about these items can be found in the Usage 
 section below._
 
+## Requirements
+
+* Ember >= 1.13.0
+* Ember CLI
+
 ## Installation
 
 The following will install this addon:
@@ -33,6 +39,12 @@ The following will install this addon:
 
 __As mentioned you must install some version of Bootstrap3 in your
 Ember application should you want this to work.__
+
+### Upgrading
+
+When working through the Ember upgrade process, I recommend
+invoking the `ember install ember-cli-bootstrap3-grid` command once 
+you are done to get the latest version of the addon.
 
 ## Usage
 

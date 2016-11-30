@@ -38,6 +38,11 @@ export default Ember.Component.extend({
   tagName: 'div',
   /**
    * OPTIONAL.
+   * Used to specify that you'd like a clearfix for ALL sizes.
+   */
+  'visible-all': false,
+  /**
+   * OPTIONAL.
    */
   'visible-lg': false,
   /**
@@ -55,30 +60,26 @@ export default Ember.Component.extend({
   /**
    * Used in the classNameBinding.
    */
-  visibleLgBlock: Ember.computed('_render?', 'visible-lg', function () {
-    return this.get('visible-lg') && this.get('_render?');
-  }),
+  visibleLgBlock: Ember.computed.and('_render?', '_visibleLg'),
   /**
    * Used in the classNameBinding.
    */
-  visibleMdBlock: Ember.computed('_render?', 'visible-md', function () {
-    return this.get('visible-md') && this.get('_render?');
-  }),
+  visibleMdBlock: Ember.computed.and('_render?', '_visibleMd'),
   /**
    * Used in the classNameBinding.
    */
-  visibleSmBlock: Ember.computed('_render?', 'visible-sm', function () {
-    return this.get('visible-sm') && this.get('_render?');
-  }),
+  visibleSmBlock: Ember.computed.and('_render?', '_visibleSm'),
   /**
    * Used in the classNameBinding.
    */
-  visibleXsBlock: Ember.computed('_render?', 'visible-xs', function () {
-    return this.get('visible-xs') && this.get('_render?');
-  }),
+  visibleXsBlock: Ember.computed.and('_render?', '_visibleXs'),
   _countGreaterThanZero: Ember.computed.gt('count', 0),
   _indexGreaterThanOrEqualToZero: Ember.computed.gte('index', 0),
   '_render?': Ember.computed('columnCount', 'index', function () {
     return this.get('index') > 0 && ((this.get('index') + 1) % this.get('columnCount')) === 0;
-  })
+  }),
+  _visibleLg: Ember.computed.or('visible-lg', 'visible-all'),
+  _visibleMd: Ember.computed.or('visible-md', 'visible-all'),
+  _visibleSm: Ember.computed.or('visible-sm', 'visible-all'),
+  _visibleXs: Ember.computed.or('visible-xs', 'visible-all')
 });

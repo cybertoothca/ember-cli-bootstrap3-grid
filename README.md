@@ -92,6 +92,8 @@ clearfix after every third column:
 
     <div class="ember-view clearfix visible-sm-block visible-md-block visible-lg-block"></div>
 
+---
+
 Here's another example where you may need multiple clearfix resets:
 
     <div class="row">
@@ -109,6 +111,8 @@ Here's another example where you may need multiple clearfix resets:
 render the clearfix for small displays every second column, and for
 medium displays every third column, and for large displays every
 fourth column.
+
+---
 
 Here's an example where you may need clearfix resets EVERY three columns:
 

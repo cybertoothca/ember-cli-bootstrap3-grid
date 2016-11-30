@@ -61,7 +61,7 @@ Use this component in your each-loop.
 * `columnCount` - the number of columns that are being rendered in the
 grid.  __Required Default: `1`__
 * `index` - the loop index. __Required__
-* `visible-all` - render the clearfix element for all screen sizes.
+* `visible-all` - render the clearfix element for all screen sizes.  __Default `false`__
 * `visible-lg` - render the element for large size screens only.
 __Default `false`__
 * `visible-md` - render the element for medium size screens only.

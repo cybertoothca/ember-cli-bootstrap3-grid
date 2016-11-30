@@ -3,12 +3,12 @@
 [![npm version](https://badge.fury.io/js/ember-cli-bootstrap3-grid.svg)](https://badge.fury.io/js/ember-cli-bootstrap3-grid) [![CircleCI](https://circleci.com/gh/cybertoothca/ember-cli-bootstrap3-grid.svg?style=shield)](https://circleci.com/gh/cybertoothca/ember-cli-bootstrap3-grid) [![Code Climate](https://codeclimate.com/github/cybertoothca/ember-cli-bootstrap3-grid/badges/gpa.svg)](https://codeclimate.com/github/cybertoothca/ember-cli-bootstrap3-grid) ![Dependencies](https://david-dm.org/cybertoothca/ember-cli-bootstrap3-grid.svg) [![ember-observer-badge](http://emberobserver.com/badges/ember-cli-bootstrap3-grid.svg)](http://emberobserver.com/addons/ember-cli-bootstrap3-grid) [![License](https://img.shields.io/npm/l/ember-cli-bootstrap3-grid.svg)](LICENSE.md)
 
 This addon gives you access to several helpful components and mixins
-that can be used to compliment the 
+that can be used to compliment the
 [Bootstrap3 Grid System](http://getbootstrap.com/css/#grid).
 
 __You must have Bootstrap 3.x installed in your Ember application.__  
-Feel free to use the 
-[ember-cli-bootstrap3-sass](https://emberobserver.com/addons/ember-cli-bootstrap3-sass) 
+Feel free to use the
+[ember-cli-bootstrap3-sass](https://emberobserver.com/addons/ember-cli-bootstrap3-sass)
 addon to setup Bootstrap if you haven't already done so.
 
 ## What Does This Addon Do?
@@ -20,10 +20,10 @@ each loop
 
 ...and the following _mixins_:
 
-* `Viewport` - imported as 
-`import Viewport as 'ember-cli-bootstrap3-grid/mixins/viewport'` 
+* `Viewport` - imported as
+`import Viewport as 'ember-cli-bootstrap3-grid/mixins/viewport'`
 
-_Further information about these items can be found in the Usage 
+_Further information about these items can be found in the Usage
 section below._
 
 ## Requirements
@@ -43,7 +43,7 @@ Ember application should you want this to work.__
 ### Upgrading
 
 When working through the Ember upgrade process, I recommend
-invoking the `ember install ember-cli-bootstrap3-grid` command once 
+invoking the `ember install ember-cli-bootstrap3-grid` command once
 you are done to get the latest version of the addon.
 
 ## Usage
@@ -52,15 +52,16 @@ you are done to get the latest version of the addon.
 
 #### `{{twbs-clearfix}}`
 
-Ever wanted an efficient way to render those 
+Ever wanted an efficient way to render those
 `<div class="clearfix"></div>` for [responsive column resets](http://getbootstrap.com/css/#grid-responsive-resets)?
 Use this component in your each-loop.
 
 ##### Arguments
 
-* `columnCount` - the number of columns that are being rendered in the 
+* `columnCount` - the number of columns that are being rendered in the
 grid.  __Required Default: `1`__
-* `index` - the loop index. __Required__  
+* `index` - the loop index. __Required__
+* `visible-all` - render the clearfix element for all screen sizes.
 * `visible-lg` - render the element for large size screens only.
 __Default `false`__
 * `visible-md` - render the element for medium size screens only.
@@ -72,10 +73,10 @@ __Default `false`__
 
 ##### Examples
 
-Inside the following loop three columns are being rendered for 
-sizes _sm_/_md_/_lg_.  To create the clearfix-div(s) it would 
-usually take considerable conditional logic.  Instead use this 
-component the following way: 
+Inside the following loop three columns are being rendered for
+sizes _sm_/_md_/_lg_.  To create the clearfix-div(s) it would
+usually take considerable conditional logic.  Instead use this
+component the following way:
 
     <div class="row">
       {{#each itemList as |item index|}}
@@ -86,7 +87,7 @@ component the following way:
       {{/each}}
     </div>
 
-... the `{{twbs-clearfix ...}}` in the above example will render the 
+... the `{{twbs-clearfix ...}}` in the above example will render the
 clearfix after every third column:
 
     <div class="ember-view clearfix visible-sm-block visible-md-block visible-lg-block"></div>
@@ -104,10 +105,27 @@ Here's another example where you may need multiple clearfix resets:
       {{/each}}
     </div>
 
-... the `{{twbs-clearfix ...}}` components in the above example will 
+... the `{{twbs-clearfix ...}}` components in the above example will
 render the clearfix for small displays every second column, and for
 medium displays every third column, and for large displays every
 fourth column.
+
+Here's an example where you may need clearfix resets EVERY three columns:
+
+    <div class="row">
+      {{#each itemList as |item index|}}
+        <div class="col-xs-4">
+          Some Item Column
+        </div>
+        {{twbs-clearfix columnCount=3 index=index visible-all=true}}
+      {{/each}}
+    </div>
+
+... the `{{twbs-clearfix ...}}` in the above example will render the
+clearfix after every third column for all sizes:
+
+    <div class="ember-view clearfix visible-xs-block visible-sm-block visible-md-block visible-lg-block"></div>
+
 
 ### Mixins
 
@@ -162,16 +180,16 @@ For more information on using ember-cli, visit [http://ember-cli.com/](http://em
 
 ## Linking
 
-1. From the command line at the root of __this__ project run the 
-`npm link` command to _link_ this addon within your local 
+1. From the command line at the root of __this__ project run the
+`npm link` command to _link_ this addon within your local
 node repository.
-1. From the _other_ Ember project that you wish to test this addon 
+1. From the _other_ Ember project that you wish to test this addon
 in, execute the following command:
 `npm link ember-cli-bootstrap3-grid`.
 1. Now in that same _other_ Ember project, you should go into the
 `package.json` and add the ember addon with the version _*_.  It will
 look something like this: `"ember-cli-bootstrap3-grid": "*"`.  Now
-when/if you execute `npm install` on this _other_ project it 
+when/if you execute `npm install` on this _other_ project it
 will know to look for the linked addon rather than fetch it from
 the central repository.
 
@@ -180,6 +198,6 @@ the central repository.
 1. Remove the addon from your local node repository with the following
 command (that can be run anywhere):
 `npm uninstall -g ember-cli-bootstrap3-grid`
-1. Remove the reference to the `ember-cli-bootstrap3-grid` 
+1. Remove the reference to the `ember-cli-bootstrap3-grid`
 in your _other_ project's `package.json`.
 1. Run an `npm prune` from the root of your _other_ project's command line.

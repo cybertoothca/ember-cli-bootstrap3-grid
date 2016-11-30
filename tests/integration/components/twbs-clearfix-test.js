@@ -47,6 +47,24 @@ test('when columnCount is negative', function (assert) {
   assert.equal(this.$('div').css('display'), 'none');
 });
 
+test('when rendering a clearfix for all sizes every three columns', function(assert) {
+  this.render(hbs`{{twbs-clearfix columnCount=3 index=0 visible-all=true}}`);
+  assert.equal(this.$('div').css('display'), 'none');
+
+  this.render(hbs`{{twbs-clearfix columnCount=3 index=1 visible-all=true}}`);
+  assert.equal(this.$('div').css('display'), 'none');
+
+  this.render(hbs`{{twbs-clearfix columnCount=3 index=2 visible-all=true}}`);
+  assert.ok(this.$('div').hasClass('clearfix'));
+  assert.ok(this.$('div').hasClass('visible-lg-block'));
+  assert.ok(this.$('div').hasClass('visible-md-block'));
+  assert.ok(this.$('div').hasClass('visible-sm-block'));
+  assert.ok(this.$('div').hasClass('visible-xs-block'));
+
+  this.render(hbs`{{twbs-clearfix columnCount=3 index=3 visible-all=true}}`);
+  assert.equal(this.$('div').css('display'), 'none');
+});
+
 test('when rendering three columns', function (assert) {
   this.render(hbs`{{twbs-clearfix columnCount=3 index=0 visible-xs=true}}`);
   assert.equal(this.$('div').css('display'), 'none');

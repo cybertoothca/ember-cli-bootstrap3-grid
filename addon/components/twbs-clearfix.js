@@ -33,7 +33,7 @@ export default Ember.Component.extend({
   /**
    * If the index has not been supplied, then don't render anything.
    */
-  isVisible: Ember.computed.and('_indexGreaterThanOrEqualToZero', '_countGreaterThanZero'),
+  isVisible: Ember.computed.alias('_render?'),
   layout,
   tagName: 'div',
   /**
@@ -73,8 +73,6 @@ export default Ember.Component.extend({
    * Used in the classNameBinding.
    */
   visibleXsBlock: Ember.computed.and('_render?', '_visibleXs'),
-  _countGreaterThanZero: Ember.computed.gt('count', 0),
-  _indexGreaterThanOrEqualToZero: Ember.computed.gte('index', 0),
   '_render?': Ember.computed('columnCount', 'index', function () {
     return this.get('index') > 0 && ((this.get('index') + 1) % this.get('columnCount')) === 0;
   }),

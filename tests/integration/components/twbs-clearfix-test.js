@@ -73,6 +73,7 @@ test('when rendering three columns', function (assert) {
   assert.equal(this.$('div').css('display'), 'none');
 
   this.render(hbs`{{twbs-clearfix columnCount=3 index=2 visible-xs=true}}`);
+  assert.equal(this.$('div').attr('style'), undefined);
   assert.ok(this.$('div').hasClass('clearfix'));
   assert.notOk(this.$('div').hasClass('visible-lg-block'));
   assert.notOk(this.$('div').hasClass('visible-md-block'));
@@ -91,6 +92,7 @@ test('when rendering three columns for two different sizes', function (assert) {
   assert.equal(this.$('div').css('display'), 'none');
 
   this.render(hbs`{{twbs-clearfix columnCount=3 index=2 visible-sm=true visible-md=true}}`);
+  assert.equal(this.$('div').attr('style'), undefined);
   assert.ok(this.$('div').hasClass('clearfix'));
   assert.notOk(this.$('div').hasClass('visible-lg-block'));
   assert.ok(this.$('div').hasClass('visible-md-block'));
@@ -106,6 +108,7 @@ test('when rendering two columns', function (assert) {
   assert.equal(this.$('div').css('display'), 'none');
 
   this.render(hbs`{{twbs-clearfix columnCount=2 index=1 visible-lg=true}}`);
+  assert.equal(this.$('div').attr('style'), undefined);
   assert.ok(this.$('div').hasClass('clearfix'));
   assert.ok(this.$('div').hasClass('visible-lg-block'));
   assert.notOk(this.$('div').hasClass('visible-md-block'));
@@ -116,6 +119,7 @@ test('when rendering two columns', function (assert) {
   assert.equal(this.$('div').css('display'), 'none');
 
   this.render(hbs`{{twbs-clearfix columnCount=2 index=3 visible-md=true}}`);
+  assert.equal(this.$('div').attr('style'), undefined);
   assert.ok(this.$('div').hasClass('clearfix'));
   assert.notOk(this.$('div').hasClass('visible-lg-block'));
   assert.ok(this.$('div').hasClass('visible-md-block'));

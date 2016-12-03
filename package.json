@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-bootstrap3-grid",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This addon gives you access to several helpful components and mixins that can be used to compliment the Bootstrap3 Grid System.",
   "directories": {
     "doc": "doc",

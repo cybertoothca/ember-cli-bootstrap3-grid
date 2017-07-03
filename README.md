@@ -138,12 +138,10 @@ clearfix after every third column for all sizes:
 A mixin that captures the width of the browser viewport on resizes and
 offers several helpful queries to determine the size.
 
-Include the viewport in your Route or Component and then mix it:
+Include the viewport in your Component (or Controller, but don't use controllers!) and then mix it:
 
     import Viewport from 'ember-cli-bootstrap3-grid/mixins/viewport';
     
-    // in a route
-    export default Ember.Route.extend(Viewport, { ... });
     // or in a component
     export default Ember.Component.extend(Viewport, { ... });
 

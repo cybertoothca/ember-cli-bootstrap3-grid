@@ -138,6 +138,12 @@ clearfix after every third column for all sizes:
 A mixin that captures the width of the browser viewport on resizes and
 offers several helpful queries to determine the size.
 
+Include the viewport in your Route or Component js:
+
+    import Viewport from 'ember-cli-bootstrap3-grid/mixins/viewport';
+
+...and then use the properties listed below inside both your js or hbs template.
+
 ##### Properties
 
 * `lg?` - `true` when viewport is 1200px or wider, `false` otherwise.

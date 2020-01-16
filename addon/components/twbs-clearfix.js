@@ -1,4 +1,6 @@
-import Ember from 'ember';
+import { computed } from '@ember/object';
+import { or, alias, and } from '@ember/object/computed';
+import Component from '@ember/component';
 // noinspection JSFileReferences
 import layout from '../templates/components/twbs-clearfix';
 
@@ -8,7 +10,7 @@ import layout from '../templates/components/twbs-clearfix';
  * that you want the column-reset rendered for.
  * @see http://getbootstrap.com/css/#grid-responsive-resets
  */
-export default Ember.Component.extend({
+export default Component.extend({
   /**
    * The class bindings based on the computed properties within.
    */
@@ -22,7 +24,7 @@ export default Ember.Component.extend({
   /**
    * Used in the classNameBinding.
    */
-  clearfix: Ember.computed.or('visibleLgBlock', 'visibleMdBlock', 'visibleSmBlock', 'visibleXsBlock'),
+  clearfix: or('visibleLgBlock', 'visibleMdBlock', 'visibleSmBlock', 'visibleXsBlock'),
   /**
    * REQUIRED.  Specify the positive-non-zero column count that you expect the responsive column reset to be applied to.
    */
@@ -34,7 +36,7 @@ export default Ember.Component.extend({
   /**
    * If the index has not been supplied, then don't render anything.
    */
-  isVisible: Ember.computed.alias('_isRender'),
+  isVisible: alias('_isRender'),
   layout,
   tagName: 'div',
   /**
@@ -61,24 +63,24 @@ export default Ember.Component.extend({
   /**
    * Used in the classNameBinding.
    */
-  visibleLgBlock: Ember.computed.and('_isRender', '_visibleLg'),
+  visibleLgBlock: and('_isRender', '_visibleLg'),
   /**
    * Used in the classNameBinding.
    */
-  visibleMdBlock: Ember.computed.and('_isRender', '_visibleMd'),
+  visibleMdBlock: and('_isRender', '_visibleMd'),
   /**
    * Used in the classNameBinding.
    */
-  visibleSmBlock: Ember.computed.and('_isRender', '_visibleSm'),
+  visibleSmBlock: and('_isRender', '_visibleSm'),
   /**
    * Used in the classNameBinding.
    */
-  visibleXsBlock: Ember.computed.and('_isRender', '_visibleXs'),
-  _isRender: Ember.computed('columnCount', 'index', function () {
+  visibleXsBlock: and('_isRender', '_visibleXs'),
+  _isRender: computed('columnCount', 'index', function () {
     return this.get('index') > 0 && ((this.get('index') + 1) % this.get('columnCount')) === 0;
   }),
-  _visibleLg: Ember.computed.or('visible-lg', 'visible-all'),
-  _visibleMd: Ember.computed.or('visible-md', 'visible-all'),
-  _visibleSm: Ember.computed.or('visible-sm', 'visible-all'),
-  _visibleXs: Ember.computed.or('visible-xs', 'visible-all')
+  _visibleLg: or('visible-lg', 'visible-all'),
+  _visibleMd: or('visible-md', 'visible-all'),
+  _visibleSm: or('visible-sm', 'visible-all'),
+  _visibleXs: or('visible-xs', 'visible-all')
 });

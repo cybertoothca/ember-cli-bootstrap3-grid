@@ -1,19 +1,21 @@
-import Ember from 'ember';
+import EmberObject from '@ember/object';
+import { A } from '@ember/array';
+import Route from '@ember/routing/route';
 
-export default Ember.Route.extend({
+export default Route.extend({
   model() {
-    return Ember.A().pushObjects([
-      Ember.Object.create({name: 'A'}),
-      Ember.Object.create({name: 'B'}),
-      Ember.Object.create({name: 'C'}),
-      Ember.Object.create({name: 'D'}),
-      Ember.Object.create({name: 'E'}),
-      Ember.Object.create({name: 'F'}),
-      Ember.Object.create({name: 'G'}),
-      Ember.Object.create({name: 'H'}),
-      Ember.Object.create({name: 'I'}),
-      Ember.Object.create({name: 'J'}),
-      Ember.Object.create({name: 'K'}),
+    return A().pushObjects([
+      EmberObject.create({name: 'A'}),
+      EmberObject.create({name: 'B'}),
+      EmberObject.create({name: 'C'}),
+      EmberObject.create({name: 'D'}),
+      EmberObject.create({name: 'E'}),
+      EmberObject.create({name: 'F'}),
+      EmberObject.create({name: 'G'}),
+      EmberObject.create({name: 'H'}),
+      EmberObject.create({name: 'I'}),
+      EmberObject.create({name: 'J'}),
+      EmberObject.create({name: 'K'}),
     ]);
   }
 });

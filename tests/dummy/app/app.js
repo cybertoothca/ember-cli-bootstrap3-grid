@@ -1,9 +1,9 @@
-import Ember from 'ember';
-import Resolver from './resolver';
+import Application from '@ember/application';
 import loadInitializers from 'ember-load-initializers';
 import config from './config/environment';
+import Resolver from './resolver';
 
-const App = Ember.Application.extend({
+const App = Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
   Resolver

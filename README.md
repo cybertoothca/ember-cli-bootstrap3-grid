@@ -170,7 +170,6 @@ Include the viewport in your Component (or Controller, but don't use controllers
 
 * `git clone git@github.com:cybertoothca/ember-cli-bootstrap3-grid.git`
 * `npm install`
-* `bower install`
 
 ## Running The Dummy Application
 

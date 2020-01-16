@@ -1,6 +1,5 @@
-/*jshint node:true*/
-/* global require, module */
-var EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
+/* eslint-env node */
+const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 module.exports = function(defaults) {
   var app = new EmberAddon(defaults, {
@@ -10,7 +9,6 @@ module.exports = function(defaults) {
     //   ]
     // }
   });
-
 
   // bootstrap & bootstrap-sass from node_modules
   app.import("../../node_modules/bootstrap/dist/js/bootstrap.js");

@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-bootstrap3-grid",
-  "version": "1.0.1",
+  "version": "2.0.0-rc.0",
   "description": "This addon gives you access to several helpful components and mixins that can be used to compliment the Bootstrap3 Grid System.",
   "directories": {
     "doc": "doc",
@@ -40,7 +40,6 @@
     "ember-cli": "~2.18.2",
     "ember-cli-dependency-checker": "^2.0.0",
     "ember-cli-eslint": "^4.2.1",
-    "ember-cli-htmlbars": "^2.0.5",
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-inject-live-reload": "^1.4.0",
     "ember-cli-qunit": "^4.1.1",
@@ -50,7 +49,6 @@
     "ember-cli-uglify": "^2.0.0",
     "ember-disable-prototype-extensions": "^1.1.2",
     "ember-export-application-global": "^2.0.0",
-    "ember-inflector": "^1.9.6",
     "ember-load-initializers": "^1.0.0",
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.18.0",
@@ -70,7 +68,7 @@
   ],
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
-    "ember-cli-htmlbars": "^2.0.1"
+    "ember-cli-htmlbars": "^2.0.5"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"

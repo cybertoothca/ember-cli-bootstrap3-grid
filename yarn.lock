@@ -1303,7 +1303,7 @@ broccoli-asset-rewrite@^1.1.0:
   dependencies:
     broccoli-filter "^1.2.3"
 
-broccoli-babel-transpiler@^5.6.0, broccoli-babel-transpiler@^5.6.2:
+broccoli-babel-transpiler@^5.6.0:
   version "5.7.4"
   resolved "https://registry.yarnpkg.com/broccoli-babel-transpiler/-/broccoli-babel-transpiler-5.7.4.tgz#2b0611ce9e5d98b8d8d2b49ae1219af2f52767e3"
   integrity sha512-gI14Pqc4qbmn5RW4SuAmybLiOoYW59D+HzQyhY6WdaGMAjikKBwJN0p17phyvafQ+kvG0mUiMd83lgHLeATnEA==
@@ -2519,17 +2519,6 @@ ember-cli-babel@5.1.10:
     ember-cli-version-checker "^1.0.2"
     resolve "^1.1.2"
 
-ember-cli-babel@^5.1.7:
-  version "5.2.8"
-  resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-5.2.8.tgz#0356b03cc3fdff5d0f2ecaa46a0e1cfaebffd876"
-  integrity sha512-Mt9OOB5RaZwjde+LYef8EgwNVCAzsYDv4ktshblaXxr4m/Xm5/7/rxEu42RNrYkoy/qWpT9uhaD+JKK4riMf+w==
-  dependencies:
-    broccoli-babel-transpiler "^5.6.2"
-    broccoli-funnel "^1.0.0"
-    clone "^2.0.0"
-    ember-cli-version-checker "^1.0.2"
-    resolve "^1.1.2"
-
 ember-cli-babel@^6.11.0, ember-cli-babel@^6.12.0, ember-cli-babel@^6.16.0, ember-cli-babel@^6.6.0, ember-cli-babel@^6.8.1, ember-cli-babel@^6.8.2:
   version "6.18.0"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-6.18.0.tgz#3f6435fd275172edeff2b634ee7b29ce74318957"
@@ -2602,7 +2591,7 @@ ember-cli-htmlbars-inline-precompile@^1.0.0:
     heimdalljs-logger "^0.1.9"
     silent-error "^1.1.0"
 
-ember-cli-htmlbars@^2.0.1:
+ember-cli-htmlbars@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-2.0.5.tgz#b5a105429a6bce4f7c9c97b667e3b8926e31397f"
   integrity sha512-3f3PAxdnQ/fhQa8XP/3z4RLRgLHxV8j4Ln75aHbRdemOCjBa048KxL9l+acRLhCulbGQCMnLiIUIC89PAzLrcA==
@@ -2861,13 +2850,6 @@ ember-export-application-global@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/ember-export-application-global/-/ember-export-application-global-2.0.1.tgz#b120a70e322ab208defc9e2daebe8d0dfc2dcd46"
   integrity sha512-B7wiurPgsxsSGzJuPFkpBWnaeuCu2PGpG2BjyrfA1VcL7//o+5RSnZqiCEY326y7qmxb2GoCgo0ft03KBU0rRw==
-
-ember-inflector@^1.9.6:
-  version "1.12.1"
-  resolved "https://registry.yarnpkg.com/ember-inflector/-/ember-inflector-1.12.1.tgz#d8bd2ca2f327b439720f89923fe614d46b5da1ca"
-  integrity sha1-2L0sovMntDlyD4mSP+YU1Gtdoco=
-  dependencies:
-    ember-cli-babel "^5.1.7"
 
 ember-load-initializers@^1.0.0:
   version "1.1.0"

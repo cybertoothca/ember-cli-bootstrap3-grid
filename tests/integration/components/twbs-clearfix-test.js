@@ -7,6 +7,7 @@ moduleForComponent('twbs-clearfix', 'Integration | Component | twbs clearfix', {
 
 test('when index is null', function (assert) {
   this.set('index', null);
+
   this.render(hbs`{{twbs-clearfix columnCount=3 visible-xs=true index=index}}`);
   assert.equal(this.$('div').css('display'), 'none');
 });

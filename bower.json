@@ -1,4 +1,5 @@
 {
-  "name": "my-addon",
-  "dependencies": {}
+  "name": "ember-cli-bootstrap3-grid",
+  "dependencies": {
+  }
 }

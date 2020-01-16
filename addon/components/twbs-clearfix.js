@@ -1,4 +1,5 @@
 import Ember from 'ember';
+// noinspection JSFileReferences
 import layout from '../templates/components/twbs-clearfix';
 
 /**
@@ -33,7 +34,7 @@ export default Ember.Component.extend({
   /**
    * If the index has not been supplied, then don't render anything.
    */
-  isVisible: Ember.computed.alias('_render?'),
+  isVisible: Ember.computed.alias('_isRender'),
   layout,
   tagName: 'div',
   /**
@@ -60,20 +61,20 @@ export default Ember.Component.extend({
   /**
    * Used in the classNameBinding.
    */
-  visibleLgBlock: Ember.computed.and('_render?', '_visibleLg'),
+  visibleLgBlock: Ember.computed.and('_isRender', '_visibleLg'),
   /**
    * Used in the classNameBinding.
    */
-  visibleMdBlock: Ember.computed.and('_render?', '_visibleMd'),
+  visibleMdBlock: Ember.computed.and('_isRender', '_visibleMd'),
   /**
    * Used in the classNameBinding.
    */
-  visibleSmBlock: Ember.computed.and('_render?', '_visibleSm'),
+  visibleSmBlock: Ember.computed.and('_isRender', '_visibleSm'),
   /**
    * Used in the classNameBinding.
    */
-  visibleXsBlock: Ember.computed.and('_render?', '_visibleXs'),
-  '_render?': Ember.computed('columnCount', 'index', function () {
+  visibleXsBlock: Ember.computed.and('_isRender', '_visibleXs'),
+  _isRender: Ember.computed('columnCount', 'index', function () {
     return this.get('index') > 0 && ((this.get('index') + 1) % this.get('columnCount')) === 0;
   }),
   _visibleLg: Ember.computed.or('visible-lg', 'visible-all'),

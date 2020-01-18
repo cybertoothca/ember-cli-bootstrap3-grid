@@ -1,6 +1,6 @@
-import { computed } from '@ember/object';
-import { or, alias, and } from '@ember/object/computed';
 import Component from '@ember/component';
+import { computed } from '@ember/object';
+import { alias, and, or } from '@ember/object/computed';
 // noinspection JSFileReferences
 import layout from '../templates/components/twbs-clearfix';
 
@@ -21,6 +21,7 @@ export default Component.extend({
     'visibleSmBlock',
     'visibleXsBlock'
   ],
+  classNames: ['twbs-clearfix'],
   /**
    * Used in the classNameBinding.
    */
@@ -76,7 +77,7 @@ export default Component.extend({
    * Used in the classNameBinding.
    */
   visibleXsBlock: and('_isRender', '_visibleXs'),
-  _isRender: computed('columnCount', 'index', function () {
+  _isRender: computed('columnCount', 'index', function() {
     return this.get('index') > 0 && ((this.get('index') + 1) % this.get('columnCount')) === 0;
   }),
   _visibleLg: or('visible-lg', 'visible-all'),

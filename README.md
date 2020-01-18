@@ -176,6 +176,11 @@ Include the viewport in your Component (or Controller, but don't use controllers
 * `ember server`
 * Visit your app at http://localhost:4200.
 
+## Linting
+
+* `npm run lint:js`
+* `npm run lint:js -- --fix`
+
 ## Running Addon Tests
 
 * `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
@@ -213,3 +218,7 @@ command (that can be run anywhere):
 1. Remove the reference to the `ember-cli-bootstrap3-grid`
 in your _other_ project's `package.json`.
 1. Run an `npm prune` from the root of your _other_ project's command line.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE.md).

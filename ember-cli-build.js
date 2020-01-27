@@ -4,11 +4,12 @@ const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 module.exports = function(defaults) {
   let app = new EmberAddon(defaults, {
-    // sassOptions: {
-    //   includePaths: [
-    //     'node_modules/bootstrap-sass/assets/stylesheets'
-    //   ]
-    // }
+    sassOptions: {
+      includePaths: [
+        'node_modules/bootstrap-sass/assets/stylesheets',
+        'node_modules/bootstrap-sass/assets/stylesheets/bootstrap'
+      ]
+    }
   });
 
   // bootstrap & bootstrap-sass from node_modules

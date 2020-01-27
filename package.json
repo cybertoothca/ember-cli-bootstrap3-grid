@@ -40,7 +40,7 @@
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-inject-live-reload": "^1.4.0",
     "ember-cli-qunit": "^4.3.2",
-    "ember-cli-sass": "5.6.0",
+    "ember-cli-sass": "^10.0.1",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^2.0.0",
@@ -55,7 +55,8 @@
     "eslint-plugin-ember": "^5.0.0",
     "eslint-plugin-node": "^6.0.1",
     "loader.js": "^4.2.3",
-    "qunit-dom": "^0.6.2"
+    "qunit-dom": "^0.6.2",
+    "sass": "^1.25.1-test.1"
   },
   "keywords": [
     "ember-addon",

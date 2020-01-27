@@ -1,8 +1,7 @@
-import $ from 'jquery';
-import { on } from '@ember/object/evented';
-import { not } from '@ember/object/computed';
 import { computed } from '@ember/object';
+import { not } from '@ember/object/computed';
 import Mixin from '@ember/object/mixin';
+import $ from 'jquery';
 
 /**
  * The Viewport mixin can be used to add a number of helpful responsive queries to any component.  These
@@ -17,14 +16,14 @@ export default Mixin.create({
   /**
    * @return true when viewport is 1200px or wider, false otherwise.
    */
-  'lg?': computed('_width', function () {
+  'lg?': computed('_width', function() {
     const width = this.get('_width');
     return width >= 1200;
   }),
   /**
    * @return true when viewport is 992px to 1199px, false otherwise.
    */
-  'md?': computed('_width', function () {
+  'md?': computed('_width', function() {
     const width = this.get('_width');
     return width >= 992 && width < 1200;
   }),
@@ -47,27 +46,28 @@ export default Mixin.create({
   /**
    * @return true when viewport is 768px to 991px, false otherwise.
    */
-  'sm?': computed('_width', function () {
+  'sm?': computed('_width', function() {
     const width = this.get('_width');
     return width >= 768 && width < 992;
   }),
   /**
    * @return true when viewport is smaller than 768px, false otherwise.
    */
-  'xs?': computed('_width', function () {
+  'xs?': computed('_width', function() {
     const width = this.get('_width');
     return width < 768;
   }),
   /**
    * Handles `window` resize events, recording the width of the Viewport to this mixin's `_width` property.
    */
-  _bindWindowResize: on('init', function () {
+  init() {
+    this._super(arguments);
     const self = this;
     $(window).on('resize', () => {
       if (!(self.get('isDestroyed') || self.get('isDestroying'))) {
         self.set('_width', $(window).width());
       }
     });
-  }),
+  },
   _width: $(window).width()
 });

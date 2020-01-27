@@ -57,11 +57,11 @@ module('Integration | Component | twbs clearfix', function(hooks) {
     assert.equal(find('div.twbs-clearfix').style.display, 'none');
 
     await render(hbs`{{twbs-clearfix columnCount=3 index=2 visible-all=true}}`);
-    assert.ok(find('div.twbs-clearfix').classList.contains('clearfix'));
-    assert.ok(find('div.twbs-clearfix').classList.contains('visible-lg-block'));
-    assert.ok(find('div.twbs-clearfix').classList.contains('visible-md-block'));
-    assert.ok(find('div.twbs-clearfix').classList.contains('visible-sm-block'));
-    assert.ok(find('div.twbs-clearfix').classList.contains('visible-xs-block'));
+    assert.dom('div.twbs-clearfix').hasClass('clearfix');
+    assert.dom('div.twbs-clearfix').hasClass('visible-lg-block');
+    assert.dom('div.twbs-clearfix').hasClass('visible-md-block');
+    assert.dom('div.twbs-clearfix').hasClass('visible-sm-block');
+    assert.dom('div.twbs-clearfix').hasClass('visible-xs-block');
 
     await render(hbs`{{twbs-clearfix columnCount=3 index=3 visible-all=true}}`);
     assert.equal(find('div.twbs-clearfix').style.display, 'none');
@@ -75,12 +75,12 @@ module('Integration | Component | twbs clearfix', function(hooks) {
     assert.equal(find('div.twbs-clearfix').style.display, 'none');
 
     await render(hbs`{{twbs-clearfix columnCount=3 index=2 visible-xs=true}}`);
-    assert.equal(find('div.twbs-clearfix').getAttribute('style'), undefined);
-    assert.ok(find('div.twbs-clearfix').classList.contains('clearfix'));
-    assert.notOk(find('div.twbs-clearfix').classList.contains('visible-lg-block'));
-    assert.notOk(find('div.twbs-clearfix').classList.contains('visible-md-block'));
-    assert.notOk(find('div.twbs-clearfix').classList.contains('visible-sm-block'));
-    assert.ok(find('div.twbs-clearfix').classList.contains('visible-xs-block'));
+    // assert.dom('div.twbs-clearfix').hasAttribute('style', undefined);
+    assert.dom('div.twbs-clearfix').hasClass('clearfix');
+    assert.dom('div.twbs-clearfix').hasNoClass('visible-lg-block');
+    assert.dom('div.twbs-clearfix').hasNoClass('visible-md-block');
+    assert.dom('div.twbs-clearfix').hasNoClass('visible-sm-block');
+    assert.dom('div.twbs-clearfix').hasClass('visible-xs-block');
 
     await render(hbs`{{twbs-clearfix columnCount=3 index=3 visible-xs=true}}`);
     assert.equal(find('div.twbs-clearfix').style.display, 'none');
@@ -94,12 +94,12 @@ module('Integration | Component | twbs clearfix', function(hooks) {
     assert.equal(find('div.twbs-clearfix').style.display, 'none');
 
     await render(hbs`{{twbs-clearfix columnCount=3 index=2 visible-sm=true visible-md=true}}`);
-    assert.equal(find('div.twbs-clearfix').getAttribute('style'), undefined);
-    assert.ok(find('div.twbs-clearfix').classList.contains('clearfix'));
-    assert.notOk(find('div.twbs-clearfix').classList.contains('visible-lg-block'));
-    assert.ok(find('div.twbs-clearfix').classList.contains('visible-md-block'));
-    assert.ok(find('div.twbs-clearfix').classList.contains('visible-sm-block'));
-    assert.notOk(find('div.twbs-clearfix').classList.contains('visible-xs-block'));
+    assert.dom('div.twbs-clearfix').doesNotHaveAttribute('style');
+    assert.dom('div.twbs-clearfix').hasClass('clearfix');
+    assert.dom('div.twbs-clearfix').hasNoClass('visible-lg-block');
+    assert.dom('div.twbs-clearfix').hasClass('visible-md-block');
+    assert.dom('div.twbs-clearfix').hasClass('visible-sm-block');
+    assert.dom('div.twbs-clearfix').hasNoClass('visible-xs-block');
 
     await render(hbs`{{twbs-clearfix columnCount=3 index=3 visible-sm=true visible-md=true}}`);
     assert.equal(find('div.twbs-clearfix').style.display, 'none');
@@ -110,22 +110,22 @@ module('Integration | Component | twbs clearfix', function(hooks) {
     assert.equal(find('div.twbs-clearfix').style.display, 'none');
 
     await render(hbs`{{twbs-clearfix columnCount=2 index=1 visible-lg=true}}`);
-    assert.equal(find('div.twbs-clearfix').getAttribute('style'), undefined);
-    assert.ok(find('div.twbs-clearfix').classList.contains('clearfix'));
-    assert.ok(find('div.twbs-clearfix').classList.contains('visible-lg-block'));
-    assert.notOk(find('div.twbs-clearfix').classList.contains('visible-md-block'));
-    assert.notOk(find('div.twbs-clearfix').classList.contains('visible-sm-block'));
-    assert.notOk(find('div.twbs-clearfix').classList.contains('visible-xs-block'));
+    assert.dom('div.twbs-clearfix').doesNotHaveAttribute('style');
+    assert.dom('div.twbs-clearfix').hasClass('clearfix');
+    assert.dom('div.twbs-clearfix').hasClass('visible-lg-block');
+    assert.dom('div.twbs-clearfix').hasNoClass('visible-md-block');
+    assert.dom('div.twbs-clearfix').hasNoClass('visible-sm-block');
+    assert.dom('div.twbs-clearfix').hasNoClass('visible-xs-block');
 
     await render(hbs`{{twbs-clearfix columnCount=2 index=2 visible-xs=true}}`);
     assert.equal(find('div.twbs-clearfix').style.display, 'none');
 
     await render(hbs`{{twbs-clearfix columnCount=2 index=3 visible-md=true}}`);
-    assert.equal(find('div.twbs-clearfix').getAttribute('style'), undefined);
-    assert.ok(find('div.twbs-clearfix').classList.contains('clearfix'));
-    assert.notOk(find('div.twbs-clearfix').classList.contains('visible-lg-block'));
-    assert.ok(find('div.twbs-clearfix').classList.contains('visible-md-block'));
-    assert.notOk(find('div.twbs-clearfix').classList.contains('visible-sm-block'));
-    assert.notOk(find('div.twbs-clearfix').classList.contains('visible-xs-block'));
+    assert.dom('div.twbs-clearfix').doesNotHaveAttribute('style');
+    assert.dom('div.twbs-clearfix').hasClass('clearfix');
+    assert.dom('div.twbs-clearfix').hasNoClass('visible-lg-block');
+    assert.dom('div.twbs-clearfix').hasClass('visible-md-block');
+    assert.dom('div.twbs-clearfix').hasNoClass('visible-sm-block');
+    assert.dom('div.twbs-clearfix').hasNoClass('visible-xs-block');
   });
 });

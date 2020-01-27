@@ -1,6 +1,5 @@
-/* jshint node: true */
 'use strict';
 
 module.exports = {
-  name: 'ember-cli-bootstrap3-grid'
+  name: require('./package').name
 };

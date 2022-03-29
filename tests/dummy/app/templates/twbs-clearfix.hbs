@@ -1,12 +1,21 @@
 <div class="container">
+  <button
+    class="btn btn-primary"
+    onclick={{action "toggleClearFix"}}
+    type="button"
+  >{{if isClearFixEnabled "Turn Clearfix OFF" "Turn Clearfix ON"}}</button>
   <div class="row">
     {{#each model as |item index|}}
-      <div class="col-sm-6 col-md-4 col-lg-2">
-        {{item.name}}
+      <div class="col-sm-6 col-md-4 col-lg-2" style="padding: 5px">
+        {{#random-height-block}}
+          {{index}}
+        {{/random-height-block}}
       </div>
-      {{twbs-clearfix columnCount=2 index=index visible-sm=true}}
-      {{twbs-clearfix columnCount=3 index=index visible-md=true}}
-      {{twbs-clearfix columnCount=4 index=index visible-lg=true}}
+      {{#if isClearFixEnabled}}
+        {{twbs-clearfix columnCount=2 index=index visible-sm=true}}
+        {{twbs-clearfix columnCount=3 index=index visible-md=true}}
+        {{twbs-clearfix columnCount=4 index=index visible-lg=true}}
+      {{/if}}
     {{/each}}
   </div>
 </div>

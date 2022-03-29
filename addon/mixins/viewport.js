@@ -1,4 +1,7 @@
-import Ember from 'ember';
+import { computed } from '@ember/object';
+import { not } from '@ember/object/computed';
+import Mixin from '@ember/object/mixin';
+import $ from 'jquery';
 
 /**
  * The Viewport mixin can be used to add a number of helpful responsive queries to any component.  These
@@ -9,61 +12,62 @@ import Ember from 'ember';
  * lg >= 1200px
  * @see http://getbootstrap.com/css/#grid-options
  */
-export default Ember.Mixin.create({
+export default Mixin.create({
   /**
    * @return true when viewport is 1200px or wider, false otherwise.
    */
-  'lg?': Ember.computed('_width', function () {
+  'lg?': computed('_width', function() {
     const width = this.get('_width');
     return width >= 1200;
   }),
   /**
    * @return true when viewport is 992px to 1199px, false otherwise.
    */
-  'md?': Ember.computed('_width', function () {
+  'md?': computed('_width', function() {
     const width = this.get('_width');
     return width >= 992 && width < 1200;
   }),
   /**
    * @return true when the Viewport is less than 1200px, false otherwise.
    */
-  'notLg?': Ember.computed.not('lg?'),
+  'notLg?': not('lg?'),
   /**
    * @return true when the Viewport is less than 992px or greater than 1199px, false otherwise.
    */
-  'notMd?': Ember.computed.not('md?'),
+  'notMd?': not('md?'),
   /**
    * @return true when the Viewport is less than 768px or greater than 991px, false otherwise.
    */
-  'notSm?': Ember.computed.not('sm?'),
+  'notSm?': not('sm?'),
   /**
    * @return true when the Viewport is greater than 767px, false otherwise.
    */
-  'notXs?': Ember.computed.not('xs?'),
+  'notXs?': not('xs?'),
   /**
    * @return true when viewport is 768px to 991px, false otherwise.
    */
-  'sm?': Ember.computed('_width', function () {
+  'sm?': computed('_width', function() {
     const width = this.get('_width');
     return width >= 768 && width < 992;
   }),
   /**
    * @return true when viewport is smaller than 768px, false otherwise.
    */
-  'xs?': Ember.computed('_width', function () {
+  'xs?': computed('_width', function() {
     const width = this.get('_width');
     return width < 768;
   }),
   /**
    * Handles `window` resize events, recording the width of the Viewport to this mixin's `_width` property.
    */
-  _bindWindowResize: Ember.on('init', function () {
+  init() {
+    this._super(arguments);
     const self = this;
-    Ember.$(window).on('resize', () => {
+    $(window).on('resize', () => {
       if (!(self.get('isDestroyed') || self.get('isDestroying'))) {
-        self.set('_width', Ember.$(window).width());
+        self.set('_width', $(window).width());
       }
     });
-  }),
-  _width: Ember.$(window).width()
+  },
+  _width: $(window).width()
 });

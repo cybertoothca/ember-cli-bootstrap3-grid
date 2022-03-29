@@ -2225,10 +2225,10 @@ ember-cli-broccoli-sane-watcher@^2.0.4:
     rsvp "^3.0.18"
     sane "^2.4.1"
 
-ember-cli-dependency-checker@^2.0.0:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/ember-cli-dependency-checker/-/ember-cli-dependency-checker-2.2.1.tgz#1eb728258dc7d528951c391d39b365e1beedecca"
-  integrity sha512-DmxayycdIPx6wZLpfwXq+MOtKtxhFbCw05kdGaQEyKKNSMeSdywsUjZyxneEpGb8Ztrm+kBwFW3eseydnYLWyw==
+ember-cli-dependency-checker@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-dependency-checker/-/ember-cli-dependency-checker-3.2.0.tgz#9202ad9e14d6fda33cffc22a11c343c2a8885330"
+  integrity sha512-dkSmcJ/jY/2ms/S6ph2jXSfOW5VfOpLfg5DFEbra0SaMNgYkNDFF1o0U4OdTsG37L5h/AXWNuVtnOa4TMabz9Q==
   dependencies:
     chalk "^2.3.0"
     find-yarn-workspace-root "^1.1.0"
@@ -5564,14 +5564,7 @@ resolve@1.5.0:
   dependencies:
     path-parse "^1.0.5"
 
-resolve@^1.1.6, resolve@^1.10.0, resolve@^1.3.0, resolve@^1.3.3, resolve@^1.5.0, resolve@^1.8.1:
-  version "1.14.2"
-  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.14.2.tgz#dbf31d0fa98b1f29aa5169783b9c290cb865fea2"
-  integrity sha512-EjlOBLBO1kxsUxsKjLt7TAECyKW6fOh1VRkykQkKGzcBbjjPIxBqGh0jf7GJ3k/f5mxMqW3htMD3WdTUVtW8HQ==
-  dependencies:
-    path-parse "^1.0.6"
-
-resolve@^1.6.0:
+resolve@^1.1.6, resolve@^1.10.0, resolve@^1.3.0, resolve@^1.3.3, resolve@^1.5.0, resolve@^1.6.0, resolve@^1.8.1:
   version "1.15.0"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.15.0.tgz#1b7ca96073ebb52e741ffd799f6b39ea462c67f5"
   integrity sha512-+hTmAldEGE80U2wJJDC1lebb5jWqvTYAfm3YZ1ckk1gBr0MnCqUKlwK1e+anaFljIl+F5tR5IoZcm4ZDA1zMQw==

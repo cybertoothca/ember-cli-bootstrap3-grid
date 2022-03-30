@@ -1,27 +1,27 @@
 # How To Contribute
 
-## Clone & Setup
+## Installation
 
-* `git clone git@github.com:cybertooth-io/ember-simple-auth-okta.git`
-* `cd ember-simple-auth-okta`
-* `yarn install`
+- `git clone git@github.com:cybertoothca/ember-cli-bootstrap3-grid.git`
+- `cd ember-cli-bootstrap3-grid`
+- `yarn install`
 
 ## Linting
 
-* `yarn lint:hbs`
-* `yarn lint:js`
-* `yarn lint:js --fix`
+- `yarn lint:hbs`
+- `yarn lint:js`
+- `yarn lint:js --fix`
 
 ## Running tests
 
-* `ember test` – Runs the test suite on the current Ember version
-* `ember test --server` – Runs the test suite in "watch mode"
-* `ember try:each` – Runs the test suite against multiple Ember versions
+- `ember test` – Runs the test suite on the current Ember version
+- `ember test --server` – Runs the test suite in "watch mode"
+- `ember try:each` – Runs the test suite against multiple Ember versions
 
 ## Running the dummy application
 
-* `ember serve`
-* Visit the dummy application at [http://localhost:4200](http://localhost:4200).
+- `ember serve`
+- Visit the dummy application at [http://localhost:4200](http://localhost:4200).
 
 For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
 
@@ -56,30 +56,29 @@ $ yarn unlink
 $ yarn unlink ember-simple-auth-okta
 ```
 
-## Commiting Code
+## Committing Code
 
 Fork and submit a pull request.
 
 Try to use an emoji to help describe the commit:
 
-* 🎉 Initial Commit
-* 🔖 Version Tag
-* ✨ New Feature
-* 🐛 Bugfix
-* 🔒 Security Fix
-* 📇 Metadata
-* ♻️ Refactoring
-* 📚 Documentation
-* 🌐 Internationalization
-* ♿️ Accessibility
-* 🐎 Performance
-* 🎨 Cosmetic
-* 🔧 Tooling
-* 🚨 Tests
-* 💩 Deprecation
-* 🗑 Removal
-* 🚧 Work In Progress 
-
+- 🎉 Initial Commit
+- 🔖 Version Tag
+- ✨ New Feature
+- 🐛 Bugfix
+- 🔒 Security Fix
+- 📇 Metadata
+- ♻️ Refactoring
+- 📚 Documentation
+- 🌐 Internationalization
+- ♿️ Accessibility
+- 🐎 Performance
+- 🎨 Cosmetic
+- 🔧 Tooling
+- 🚨 Tests
+- 💩 Deprecation
+- 🗑 Removal
+- 🚧 Work In Progress
 
 ## Releasing & Publishing To NPM
 
@@ -89,3 +88,5 @@ $ yarn publish
 $ git push
 $ git push --tags
 ```
+
+For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).

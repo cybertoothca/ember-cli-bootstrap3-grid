@@ -3,7 +3,9 @@
     class="btn btn-primary"
     onclick={{action "toggleClearFix"}}
     type="button"
-  >{{if isClearFixEnabled "Turn Clearfix OFF" "Turn Clearfix ON"}}</button>
+  >
+    {{if isClearFixEnabled "Turn Clearfix OFF" "Turn Clearfix ON"}}
+  </button>
   <div class="row">
     {{#each model as |item index|}}
       <div class="col-sm-6 col-md-4 col-lg-2" style="padding: 5px">

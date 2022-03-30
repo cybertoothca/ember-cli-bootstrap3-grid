@@ -78,7 +78,7 @@ export default Component.extend({
    */
   visibleXsBlock: and('_isRender', '_visibleXs'),
   _isRender: computed('columnCount', 'index', function() {
-    return this.get('index') > 0 && ((this.get('index') + 1) % this.get('columnCount')) === 0;
+    return this.index > 0 && ((this.index + 1) % this.columnCount) === 0;
   }),
   _visibleLg: or('visible-lg', 'visible-all'),
   _visibleMd: or('visible-md', 'visible-all'),

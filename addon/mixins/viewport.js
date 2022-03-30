@@ -17,14 +17,14 @@ export default Mixin.create({
    * @return true when viewport is 1200px or wider, false otherwise.
    */
   'lg?': computed('_width', function() {
-    const width = this.get('_width');
+    const width = this._width;
     return width >= 1200;
   }),
   /**
    * @return true when viewport is 992px to 1199px, false otherwise.
    */
   'md?': computed('_width', function() {
-    const width = this.get('_width');
+    const width = this._width;
     return width >= 992 && width < 1200;
   }),
   /**
@@ -47,14 +47,14 @@ export default Mixin.create({
    * @return true when viewport is 768px to 991px, false otherwise.
    */
   'sm?': computed('_width', function() {
-    const width = this.get('_width');
+    const width = this._width;
     return width >= 768 && width < 992;
   }),
   /**
    * @return true when viewport is smaller than 768px, false otherwise.
    */
   'xs?': computed('_width', function() {
-    const width = this.get('_width');
+    const width = this._width;
     return width < 768;
   }),
   /**

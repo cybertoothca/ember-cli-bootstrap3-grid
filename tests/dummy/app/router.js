@@ -8,6 +8,7 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('twbs-clearfix');
+  this.route('viewport-demo');
 });
 
 export default Router;

@@ -1,4 +1,5 @@
-name: 'Build, Test, Publish Coverage'
+name: "Build, Test, Publish Coverage"
+
 on: push
 
 jobs:
@@ -6,15 +7,15 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     env:
-      CI: 'true'
+      CI: "true"
     steps:
       - name: Checkout
         uses: actions/checkout@v1
 
-      - name: Set Node.js 10.x
+      - name: Set Node.js
         uses: actions/setup-node@master
         with:
-          node-version: 10.x
+          node-version: 12.22.8
 
       - name: Get yarn cache
         id: yarn-cache
@@ -29,18 +30,18 @@ jobs:
 
       - name: Install dependencies (yarn)
         run: yarn --non-interactive --no-progress install
-#      - name: Lint (hbs)
-#        run: yarn lint:hbs
-#      - name: Lint (js)
-#        run: yarn lint:js
-#      - name: Run test
-#        run: yarn test
-#        env:
-#          COVERAGE: 'true'
+      #      - name: Lint (hbs)
+      #        run: yarn lint:hbs
+      #      - name: Lint (js)
+      #        run: yarn lint:js
+      #      - name: Run test
+      #        run: yarn test
+      #        env:
+      #          COVERAGE: 'true'
       - name: Run test
         run: ./node_modules/.bin/ember t
         env:
-          COVERAGE: 'true'
+          COVERAGE: "true"
       # Ideally, we would split up the test task into separate build and run
       # steps to get better CI log output (folding and timing information).
       # However, this is not currently possible with ember-cli-code-coverage.

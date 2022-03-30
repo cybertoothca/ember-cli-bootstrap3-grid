@@ -13,6 +13,7 @@
   },
   "scripts": {
     "build": "ember build",
+    "ember-cli-update": "ember-cli-update",
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
     "start": "ember serve",

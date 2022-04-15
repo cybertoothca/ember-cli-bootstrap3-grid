@@ -1,11 +1,10 @@
 import Controller from "@ember/controller";
+import { action } from "@ember/object";
 
-export default Controller.extend({
-  actions: {
-    toggleClearFix() {
-      this.set("isClearFixEnabled", !this.isClearFixEnabled);
-    },
-  },
+export default class TwbsClearfixController extends Controller {
+  isClearFixEnabled = true;
 
-  isClearFixEnabled: true,
-});
+  @action toggleClearFix() {
+    this.set("isClearFixEnabled", !this.isClearFixEnabled);
+  }
+}

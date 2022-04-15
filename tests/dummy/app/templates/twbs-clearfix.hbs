@@ -1,9 +1,5 @@
 <div class="container">
-  <button
-    class="btn btn-primary"
-    type="button"
-    {{on "click" (fn this.toggleClearFix)}}
-  >
+  <button class="btn btn-primary" type="button" {{on "click" (fn this.toggleClearFix)}}>
     {{if this.isClearFixEnabled "Turn Clearfix OFF" "Turn Clearfix ON"}}
   </button>
   <div class="row">
@@ -14,21 +10,9 @@
         </RandomHeightBlock>
       </div>
       {{#if this.isClearFixEnabled}}
-        <TwbsClearfix
-          @columnCount={{2}}
-          @index={{index}}
-          @visible-sm={{true}}
-        />
-        <TwbsClearfix
-          @columnCount={{3}}
-          @index={{index}}
-          @visible-md={{true}}
-        />
-        <TwbsClearfix
-          @columnCount={{4}}
-          @index={{index}}
-          @visible-lg={{true}}
-        />
+        <TwbsClearfix @columnCount={{2}} @index={{index}} @visible-sm={{true}} />
+        <TwbsClearfix @columnCount={{3}} @index={{index}} @visible-md={{true}} />
+        <TwbsClearfix @columnCount={{4}} @index={{index}} @visible-lg={{true}} />
       {{/if}}
     {{/each}}
   </div>

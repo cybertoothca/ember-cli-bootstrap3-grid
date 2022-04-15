@@ -2,8 +2,8 @@ import EmberObject from '@ember/object';
 import ViewportMixin from 'ember-cli-bootstrap3-grid/mixins/viewport';
 import { module, test } from 'qunit';
 
-module('Unit | Mixin | viewport', function() {
-  test('it works', function(assert) {
+module('Unit | Mixin | viewport', function () {
+  test('it works', function (assert) {
     let ViewportObject = EmberObject.extend(ViewportMixin);
     let subject = ViewportObject.create();
     assert.ok(subject);
@@ -11,7 +11,7 @@ module('Unit | Mixin | viewport', function() {
 
   test('when xs?', function (assert) {
     let ViewportObject = EmberObject.extend(ViewportMixin);
-    const viewport = ViewportObject.create({ '_width': 767 });
+    const viewport = ViewportObject.create({ _width: 767 });
     assert.ok(viewport.get('xs?'), 'Should be xs');
     assert.ok(viewport.get('notSm?'), 'Should be xs');
     assert.ok(viewport.get('notMd?'), 'Should be xs');
@@ -24,7 +24,7 @@ module('Unit | Mixin | viewport', function() {
 
   test('when sm?', function (assert) {
     let ViewportObject = EmberObject.extend(ViewportMixin);
-    const viewport = ViewportObject.create({ '_width': 768 });
+    const viewport = ViewportObject.create({ _width: 768 });
     assert.ok(viewport.get('notXs?'), 'Should be sm');
     assert.ok(viewport.get('sm?'), 'Should be sm');
     assert.ok(viewport.get('notMd?'), 'Should be sm');
@@ -37,7 +37,7 @@ module('Unit | Mixin | viewport', function() {
 
   test('when md?', function (assert) {
     let ViewportObject = EmberObject.extend(ViewportMixin);
-    const viewport = ViewportObject.create({ '_width': 992 });
+    const viewport = ViewportObject.create({ _width: 992 });
     assert.ok(viewport.get('notXs?'), 'Should be md');
     assert.ok(viewport.get('notSm?'), 'Should be md');
     assert.ok(viewport.get('md?'), 'Should be md');
@@ -50,7 +50,7 @@ module('Unit | Mixin | viewport', function() {
 
   test('when lg?', function (assert) {
     let ViewportObject = EmberObject.extend(ViewportMixin);
-    const viewport = ViewportObject.create({ '_width': 1200 });
+    const viewport = ViewportObject.create({ _width: 1200 });
     assert.ok(viewport.get('notXs?'), 'Should be lg');
     assert.ok(viewport.get('notSm?'), 'Should be lg');
     assert.ok(viewport.get('notMd?'), 'Should be lg');

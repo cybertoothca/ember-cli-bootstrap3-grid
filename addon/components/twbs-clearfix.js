@@ -1,9 +1,9 @@
-import Component from "@ember/component";
-import { computed } from "@ember/object";
-import { and, not, or } from "@ember/object/computed";
+import Component from '@ember/component';
+import { computed } from '@ember/object';
+import { and, not, or } from '@ember/object/computed';
 
 // noinspection JSFileReferences
-import layout from "../templates/components/twbs-clearfix";
+import layout from '../templates/components/twbs-clearfix';
 
 /**
  * A convenience component for rendering _Responsive Column Resets_ as described in the Bootstrap documentation.  This
@@ -12,27 +12,16 @@ import layout from "../templates/components/twbs-clearfix";
  * @see http://getbootstrap.com/css/#grid-responsive-resets
  */
 export default Component.extend({
-  attributeBindings: ["_isHidden:hidden"],
+  attributeBindings: ['_isHidden:hidden'],
   /**
    * The class bindings based on the computed properties within.
    */
-  classNameBindings: [
-    "clearfix",
-    "visibleLgBlock",
-    "visibleMdBlock",
-    "visibleSmBlock",
-    "visibleXsBlock",
-  ],
-  classNames: ["twbs-clearfix"],
+  classNameBindings: ['clearfix', 'visibleLgBlock', 'visibleMdBlock', 'visibleSmBlock', 'visibleXsBlock'],
+  classNames: ['twbs-clearfix'],
   /**
    * Used in the classNameBinding.
    */
-  clearfix: or(
-    "visibleLgBlock",
-    "visibleMdBlock",
-    "visibleSmBlock",
-    "visibleXsBlock"
-  ),
+  clearfix: or('visibleLgBlock', 'visibleMdBlock', 'visibleSmBlock', 'visibleXsBlock'),
   /**
    * REQUIRED.  Specify the positive-non-zero column count that you expect the responsive column reset to be applied to.
    */
@@ -42,50 +31,50 @@ export default Component.extend({
    */
   index: undefined,
   layout,
-  tagName: "div",
+  tagName: 'div',
   /**
    * OPTIONAL.
    * Used to specify that you'd like a clearfix for ALL sizes.
    */
-  "visible-all": false,
+  'visible-all': false,
   /**
    * OPTIONAL.
    */
-  "visible-lg": false,
+  'visible-lg': false,
   /**
    * OPTIONAL.
    */
-  "visible-md": false,
+  'visible-md': false,
   /**
    * OPTIONAL.
    */
-  "visible-sm": false,
+  'visible-sm': false,
   /**
    * OPTIONAL.
    */
-  "visible-xs": false,
+  'visible-xs': false,
   /**
    * Used in the classNameBinding.
    */
-  visibleLgBlock: and("_isRender", "_visibleLg"),
+  visibleLgBlock: and('_isRender', '_visibleLg'),
   /**
    * Used in the classNameBinding.
    */
-  visibleMdBlock: and("_isRender", "_visibleMd"),
+  visibleMdBlock: and('_isRender', '_visibleMd'),
   /**
    * Used in the classNameBinding.
    */
-  visibleSmBlock: and("_isRender", "_visibleSm"),
+  visibleSmBlock: and('_isRender', '_visibleSm'),
   /**
    * Used in the classNameBinding.
    */
-  visibleXsBlock: and("_isRender", "_visibleXs"),
-  _isRender: computed("columnCount", "index", function () {
+  visibleXsBlock: and('_isRender', '_visibleXs'),
+  _isRender: computed('columnCount', 'index', function () {
     return this.index > 0 && (this.index + 1) % this.columnCount === 0;
   }),
-  _isHidden: not("_isRender"),
-  _visibleLg: or("visible-lg", "visible-all"),
-  _visibleMd: or("visible-md", "visible-all"),
-  _visibleSm: or("visible-sm", "visible-all"),
-  _visibleXs: or("visible-xs", "visible-all"),
+  _isHidden: not('_isRender'),
+  _visibleLg: or('visible-lg', 'visible-all'),
+  _visibleMd: or('visible-md', 'visible-all'),
+  _visibleSm: or('visible-sm', 'visible-all'),
+  _visibleXs: or('visible-xs', 'visible-all'),
 });

@@ -1,8 +1,8 @@
-"use strict";
+'use strict';
 
 module.exports = {
-  extends: "octane",
+  extends: 'octane',
   rules: {
-    "no-inline-styles": false,
+    'no-inline-styles': false,
   },
 };

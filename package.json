@@ -34,9 +34,9 @@
     }
   ],
   "devDependencies": {
-    "@ember/jquery": "2.0",
+    "@ember/jquery": "^2.0.0",
     "@ember/optional-features": "^2.0.0",
-    "bootstrap": "3.4.1",
+    "bootstrap": "^3.4.1",
     "bootstrap-sass": "^3.4.1",
     "broccoli-asset-rev": "^3.0.0",
     "ember-cli": "~3.10.1",

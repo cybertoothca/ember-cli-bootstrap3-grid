@@ -9,14 +9,14 @@
   <div class="row">
     {{#each model as |item index|}}
       <div class="col-sm-6 col-md-4 col-lg-2" style="padding: 5px">
-        {{#random-height-block}}
+        <RandomHeightBlock>
           {{index}}
-        {{/random-height-block}}
+        </RandomHeightBlock>
       </div>
       {{#if isClearFixEnabled}}
-        {{twbs-clearfix columnCount=2 index=index visible-sm=true}}
-        {{twbs-clearfix columnCount=3 index=index visible-md=true}}
-        {{twbs-clearfix columnCount=4 index=index visible-lg=true}}
+        <TwbsClearfix @columnCount={{2}} @index={{index}} @visible-sm={{true}} />
+        <TwbsClearfix @columnCount={{3}} @index={{index}} @visible-md={{true}} />
+        <TwbsClearfix @columnCount={{4}} @index={{index}} @visible-lg={{true}} />
       {{/if}}
     {{/each}}
   </div>

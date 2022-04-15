@@ -1,14 +1,14 @@
 # ember-cli-bootstrap3-grid
 
-Components for managing Boostrap 3 clearfix as well as a Viewport mixin for detecting Boostrap 3 screen sizes.
+[![npm version](http://badge.fury.io/js/ember-cli-bootstrap3-grid.svg)](http://badge.fury.io/js/ember-cli-bootstrap3-grid) ![downloads](https://img.shields.io/npm/dy/ember-cli-bootstrap3-grid.svg) [![Code Climate](http://codeclimate.com/github/cybertoothca/ember-cli-bootstrap3-grid/badges/gpa.svg)](http://codeclimate.com/github/cybertoothca/ember-cli-bootstrap3-grid)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/a5acd1c21cc1fddb227b/maintainability)](https://codeclimate.com/github/cybertoothca/ember-cli-bootstrap3-grid/maintainability)
-![https://github.com/cybertoothca/ember-cli-bootstrap3-grid/actions](https://github.com/cybertoothca/ember-cli-bootstrap3-grid/workflows/Build,%20Test,%20Publish%20Coverage/badge.svg)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=cybertoothca/ember-cli-bootstrap3-grid)](https://dependabot.com/compatibility-score/?dependency-name=ember-cli-bootstrap3-grid&package-manager=npm_and_yarn)
+[![ember-observer-badge](http://emberobserver.com/badges/ember-cli-bootstrap3-grid.svg)](http://emberobserver.com/addons/ember-cli-bootstrap3-grid) [![License](http://img.shields.io/npm/l/ember-cli-bootstrap3-grid.svg)](LICENSE.md)
+
+Components for managing Boostrap 3 clearfix as well as a Viewport mixin for detecting Boostrap 3 screen sizes.
 
 ## Compatibility
 
-- Ember.js v2.18 or above
+- Ember.js v3.4 or above
 - Ember CLI v2.13 or above
 - Node.js v8 or above
 

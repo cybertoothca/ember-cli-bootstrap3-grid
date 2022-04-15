@@ -8,7 +8,7 @@ Components for managing Boostrap 3 clearfix as well as a Viewport mixin for dete
 
 ## Compatibility
 
-- Ember.js v3.4 or above
+- Ember.js v3.8 or above
 - Ember CLI v2.13 or above
 - Node.js v8 or above
 

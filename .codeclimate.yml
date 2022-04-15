@@ -4,27 +4,27 @@ engines:
     enabled: true
     config:
       languages:
-      - ruby
-      - javascript
-      - python
-      - php
+        - ruby
+        - javascript
+        - python
+        - php
     exclude_fingerprints:
-    - 8d87107d7ce5cf8dcf0d3422ec7ea290
-    - 9ddd5a6b239f48c69aee7f596eba0fd8
+      - 8d87107d7ce5cf8dcf0d3422ec7ea290
+      - 9ddd5a6b239f48c69aee7f596eba0fd8
   eslint:
     enabled: true
   fixme:
     enabled: true
 ratings:
   paths:
-  - "**.inc"
-  - "**.js"
-  - "**.jsx"
-  - "**.module"
-  - "**.php"
-  - "**.py"
-  - "**.rb"
+    - '**.inc'
+    - '**.js'
+    - '**.jsx'
+    - '**.module'
+    - '**.php'
+    - '**.py'
+    - '**.rb'
 exclude_paths:
-- config/
-- tests/
-- vendor/
+  - config/
+  - tests/
+  - vendor/

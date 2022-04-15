@@ -60,26 +60,6 @@ $ yarn unlink ember-simple-auth-okta
 
 Fork and submit a pull request.
 
-Try to use an emoji to help describe the commit:
-
-- 🎉 Initial Commit
-- 🔖 Version Tag
-- ✨ New Feature
-- 🐛 Bugfix
-- 🔒 Security Fix
-- 📇 Metadata
-- ♻️ Refactoring
-- 📚 Documentation
-- 🌐 Internationalization
-- ♿️ Accessibility
-- 🐎 Performance
-- 🎨 Cosmetic
-- 🔧 Tooling
-- 🚨 Tests
-- 💩 Deprecation
-- 🗑 Removal
-- 🚧 Work In Progress
-
 ## Releasing & Publishing To NPM
 
 ```bash
@@ -88,5 +68,3 @@ $ yarn publish
 $ git push
 $ git push --tags
 ```
-
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
